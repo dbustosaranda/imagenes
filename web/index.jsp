@@ -13,26 +13,26 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Proyecto Imagenes</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-       <%
-           ArrayList<String> obj = new ArrayList<String>();
-            obj.add("<img src=\"imagenes/img-1.jpg\" alt=\"\"/>");
-            obj.add("<img src=\"imagenes/img-2.jpg\" alt=\"\"/>");
-            obj.add("<img src=\"imagenes/img-3.jpg\" alt=\"\"/>");
-            obj.add("<img src=\"imagenes/img-4.jpg\" alt=\"\"/>");
-            obj.add("<img src=\"imagenes/img-5.jpg\" alt=\"\"/>");
-            
+        <div class="centrado">
+        <%
+            ArrayList<String> obj = new ArrayList<String>();
+            			obj.add("<p><img src=\"imagenes/img-1.jpg\" alt=\"\"/></p>");
+            obj.add("<p><img src=\"imagenes/img-2.jpg\" alt=\"\"/></p>");
+            obj.add("<p><img src=\"imagenes/img-3.jpg\" alt=\"\"/></p>");
+            obj.add("<p><img src=\"imagenes/img-4.jpg\" alt=\"\"/></p>");
+            obj.add("<p><img src=\"imagenes/img-5.jpg\" alt=\"\"/></p>");
+
             Collections.shuffle(obj);
-            
+
             Iterator<String> itr = obj.iterator();
-            
-        while (itr.hasNext()) 
-        {
-        String elemento = itr.next();
-        out.println(elemento);
-        }
-            
-       %>
+
+            while (itr.hasNext()) {
+                String elemento = itr.next();
+                out.println(elemento);
+            }
+            %></div>
     </body>
 </html>
